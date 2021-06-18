@@ -11,3 +11,12 @@ Code:  let order = new Pizza(toppings, size)
 Expected Output: 
 order
 Pizza {toppings: , size: }
+
+Test: Pizza prototype cost takes the size property of the pizza and multiplys it by the rate  $1.5/in.
+Code: Pizza.prototype.cost = function () {
+return this.size * 1.5 } 
+Expected Output: 
+order.cost()
+
+
+
