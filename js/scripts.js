@@ -1,8 +1,9 @@
 //Business logic for Orders__________
-function OrdersBook(orderID) {
+function Orders() {
   this.orders = {};
   this.ordersId = 0;
 }
+
 Orders.prototype.addOrder = function (order) {
   order.id = this.assignId();
   this.orders[order.id] = order;
@@ -22,6 +23,15 @@ Pizza.prototype.cost = function () {
 };
 
 //User interface logic______________
-const inputtedToppings = $("#toppings").val()
-const inputtedSize = $("#size").val()
-let order1 = new Pizza(["pepperoni", "cheese", "olives"], 10);
+let orderBook = new Orders();
+
+$(document).ready(function() {
+  $("form#order").submit(function(event) {
+    event.preventDefault();
+    const inputtedToppings = $("#toppings").val()
+    const inputtedSize = $("#size").val()
+    let newOrder = new Pizza(inputtedToppings, inputtedSize);
+    orderBook.addOrder(newOrder);
+    console.log(orderBook.orders);
+  });
+});

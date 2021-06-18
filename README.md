@@ -5,7 +5,8 @@ Create a pizza object constructor with properties for toppings and size.
 Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 Keep it simple to start! You do not need to have a complex formula for determining cost (although you can if you like). The most important part of this code review is using and demonstrating your understanding of constructors and prototypes.
 
-Describe: OrdersBook()
+Describe: Orders()
+
 Test: This object stores orders taken from input form and stores the order ID.
 code: 
 let order = new OrderBook (order, orderId)
@@ -21,10 +22,8 @@ Test: Orders prototype assignId assigns an ID to the order taken
 Code: Orders.prototype. assignID
 Expected Output: Within OrderBook, property orders will increase by 1.
 
-
-
-
 Describe: Pizza()
+
 Test: This function should take a user's order and create a new object (instance) that inherites properties "toppings" and "size". 
 Code:  let order = new Pizza(toppings, size)
 Expected Output: 
