@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Welcome to Pizza Palace!</h1>
+  <h2>Create a Pizza:</h2>
+  <form id="order">
+    <select id="toppings">
+      <option>Cheese</option>
+      <option>Pepperoni</option>
+      <option>Artichoke</option>
+      <option>Olives</option>
+    </select>
+    <select id="size">
+      <option>10 inch</option>
+      <option>15 inch</option>
+      <option>20 inch (Super Size!)</option>
+    </select>
+    <button id="order" class="btn">Order</button>
+  </form> 
+  <h3>Total:</h3>
+  <div id="show-order">
+    <p>Your pizza will cost: <span class="cost"></span></p>
+  </div>
+</body>
+</html>
