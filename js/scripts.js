@@ -12,6 +12,16 @@ Orders.prototype.assignId = function (){
   this.orderId += 1;
   return this.orderID;
 }
+
+Orders.prototype.findOrder = function(id) {
+  if (this.orders[id] != undefined) {
+    return this.orders[id];
+  }
+  return false
+})
+// prototype find()
+
+
 //Business logic for Pizza_________
 function Pizza(toppings, size) {
   this.toppings = toppings;
