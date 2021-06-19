@@ -10,7 +10,7 @@
 <body>
   <h1>Welcome to Pizza Palace!</h1>
   <h2>Create a Pizza:</h2>
-  <form id="order">
+  <form id="newOrder">
     <select id="toppings">
       <option>Cheese</option>
       <option>Pepperoni</option>
@@ -22,11 +22,16 @@
       <option>15 inch</option>
       <option>20 inch (Super Size!)</option>
     </select>
-    <button id="order" class="btn">Order</button>
+    <button type="submit" class="btn">Order</button>
   </form> 
   <h3>Total:</h3>
+  <ul id="orders">
+  </ul>
+  
   <div id="show-order">
-    <p>Your pizza will cost: <span class="cost"></span></p>
+    <p>Your pizza will cost: <span id="cost"></span></p>
+    <div id="buttons">
+    </div>
   </div>
 </body>
 </html>
