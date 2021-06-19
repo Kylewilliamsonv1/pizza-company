@@ -25,10 +25,17 @@ Orders.prototype.findOrder = function(id) {
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
+  this.price = 0
 }
 
+Pizza.prototype.addOrder = function (order) {
+  order = this.cost()
+};
+
+
 Pizza.prototype.cost = function () {
-  return this.size * 1.5;
+  this.price=this.size * 1.5
+  return this.price
 };
 
 //User interface logic______________
@@ -37,12 +44,12 @@ $(document).ready(function() {
     event.preventDefault();
     const inputtedToppings = $("#toppings").val();
     const inputtedSize = $("#size").val();
-    let newOrder = new Pizza(inputtedToppings, inputtedSize);
+    let newOrder = new Pizza(inputtedToppings, inputtedSize, );
     console.log(newOrder);
-    let newOrderPrice = newOrder.cost();
-    console.log(newOrderPrice);
-    $("#submit").on("click",function(){
-      $("#cost").text(newOrderPrice);
+    // let newOrderPrice = this.cost(newOrder);
+    // console.log(newOrderPrice);
+    $("#newOrder").on("click",function(){
+      $("#cost").text(newOrder);
     })
   });
 });
