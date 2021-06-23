@@ -14,60 +14,24 @@ function Pizza() {toppings, size}
 Pizza.prototype.cost function (){
  return this.size * 1.5
 }
-
-# Describe: 
-Orders()
-
-Test: 
-This object stores orders taken from input form and stores the order ID.
-Code: 
-let order = new Order (order, orderId)
-Expected Output:
-order =
-Order {orders: , orderId: }
-
-Test: 
-Orders prototype addOrder adds order to Order.
-Code: 
-Orders.prototype.addOrder
-Expected Output: 
-within Orders, property orders will increase by 1.
-
-Test: 
-Orders prototype assignId assigns an ID to the order taken
-Code: 
-AddressBook.prototype.assignId = function() {
-  this.currentId += 1;
-  return this.currentId;
-Expected Output: 
-Within the object Order, the property orderID will increase by 1.
-Test:
-Orders prototype findContact returns a list of contacts
-Code:
-AddressBook.prototype.findContact = function(id) {
-  if (this.contacts[id] != undefined) {
-    return this.contacts[id];
-Expected Output:
-Within the object Order, the property findContact will return a specific ID
-
 # Describe: 
 Pizza()
 
 Test: 
-This function should take a user's order and create a new object that inherites properties "toppings" and "size". 
+It should create a Pizza object that properties toppings and size. 
 Code:
-let order = new Pizza(toppings, size)
+Pizza(toppings, size)
 Expected Output: 
-order
 Pizza {toppings: , size: }
 
 Test: 
-Pizza prototype cost takes the size property of the pizza and multiplys it by the rate  $1.5/in.
+It should take the the size of the pizza and multiplys it by $1.5/in.
 Code: 
-Pizza.prototype.cost = function () {
+Pizza.prototype.cost = function (10) {
 return this.size * 1.5 } 
 Expected Output: 
-order.cost()
+15
 
+Test:
 
 
