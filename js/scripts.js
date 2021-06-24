@@ -18,18 +18,20 @@ Pizza.prototype.topCost = function () {
   return topPrice;
 };
 
+function totalPrice () {
+  const inputtedToppings = $("#toppings").val();
+  const inputtedSize = $("#size").val();
+  let newOrder = new Pizza(inputtedToppings, inputtedSize);
+  let pizzaPrice= 0;
+  let priceBeforeTop = newOrder.sizeCost() + pizzaPrice;
+  let totalCost = priceBeforeTop + newOrder.topCost();
+  return totalCost;
+}
 
 //User interface logic______________
-let pizzaPrice= 0
-
 $(document).ready(function() {
   $("form#newOrder").submit(function(event) {
     event.preventDefault();
-    const inputtedToppings = $("#toppings").val();
-    const inputtedSize = $("#size").val();
-    let newOrder = new Pizza(inputtedToppings, inputtedSize);
-    let priceBeforeTop = newOrder.sizeCost() + pizzaPrice;
-    let totalCost = priceBeforeTop + newOrder.topCost();
-    $("ul#orders").text(totalCost)
+    $("ul#orders").text(totalPrice());
   });
 });
